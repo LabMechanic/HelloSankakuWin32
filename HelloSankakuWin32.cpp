@@ -111,15 +111,21 @@ auto APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   bmi.bmiHeader.biCompression = BI_RGB;
 
   MSG msg;
-  for (;;) {
+  bool running = true;
+  while (running) {
     while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
       if (msg.message == WM_QUIT) {
-        return TRUE;
+        running = false;
+        break;
       }
       if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg)) {
         TranslateMessage(&msg);
         DispatchMessage(&msg);
       }
+    }
+
+    if (!running) {
+      break;
     }
 
     static auto simulationTime = Win32GetMillisecs();
