@@ -1,0 +1,12 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+ColumnLimit: 80
+MaxEmptyLinesToKeep: 1
+PointerAlignment: Left
+QualifierAlignment: Right
+ReferenceAlignment: Pointer
+DerivePointerAlignment: false
+SortIncludes: CaseSensitive
+UseTab: Never
+---

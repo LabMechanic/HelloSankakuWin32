@@ -1,0 +1,21 @@
+---
+Checks:          '-*,
+modernize-*,
+performance-*,
+portability-*,
+readability-*,
+-readability-identifier-length,
+-readability-magic-numbers,
+-modernize-avoid-c-arrays'
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle:     none
+CheckOptions:
+  readability-identifier-naming.GlobalConstantCase: UPPER_CASE
+  readability-identifier-naming.VariableCase: camelBack
+  readability-identifier-naming.GlobalVariablePrefix: g_
+  readability-identifier-naming.FunctionCase: CamelCase
+  readability-identifier-naming.EnumCase: CamelCase
+  readability-identifier-naming.StructCase: CamelCase
+SystemHeaders:   false
+...
